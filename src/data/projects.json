@@ -1,0 +1,26 @@
+[
+  {
+    "title": "E-commerce",
+    "imageSrc": "projects/ecommerce.png",
+    "description": "An e-commerce app showcasing modern design and functionality.",
+    "skills": ["React", "Bootstrap", "Dummy JSON"],
+    "demo": "https://cosmic-buttercream-47f4a2.netlify.app/",
+    "source": "https://github.com/elsayed-elsadek/ecommerce"
+  },
+  {
+    "title": "Shopping Cart",
+    "imageSrc": "projects/shoppingcart.png",
+    "description": "A simple shopping cart application with essential features.",
+    "skills": ["html", "css", "Bootstrap", "JavaScript"],
+    "demo": " https://elsayed-elsadek.github.io/Shopping-Cart",
+    "source": " https://github.com/elsayed-elsadek/Shopping-Cart"
+  },
+  {
+    "title": "YouTube Clone",
+    "imageSrc": "projects/youtube.png",
+    "description": "A YouTube-like app for exploring videos using an API.",
+    "skills": ["React", "Mui", "Api"],
+    "demo": "https://679841e1795fe20ddeca3f4d--shiny-creponne-54b6d7.netlify.app/",
+    "source": "https://github.com/elsayed-elsadek/Youtube-clone"
+  }
+]

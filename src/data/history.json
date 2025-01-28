@@ -1,0 +1,25 @@
+[
+  {
+    "role": "Freelance",
+    "organisation": "Khamsaat",
+    "startDate": "jun, 2024",
+    "endDate": "Present",
+    "experiences": ["Worked on Khamsaat", "specializing in user-friendly interfaces and efficient code."],
+    "imageSrc": "history/khamsat.png"
+  },
+  {
+    "role": "Front-End Developer",
+    "organisation": "Web Master",
+    "startDate": "sep 2024",
+    "endDate": "jan 2025",
+    "experiences": [
+      "Developed responsive user interfaces using modern frameworks like React",
+      "Collaborated with UX/UI designers to implement pixel-perfect designs.",
+      "Integrated APIs to create dynamic, data-driven applications.",
+      "Built reusable components and libraries for future use.",
+      "Ensured cross-browser compatibility and mobile responsiveness."
+    ],
+    "imageSrc": "history/webmaster.png"
+  }
+  
+]
