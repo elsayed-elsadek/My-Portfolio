@@ -5,6 +5,7 @@
   margin-top: 79px;
   margin-left: 10%;
   margin-right: 10%;
+  animation: fadeIn 1s ease-out;
 }
 
 .title {
@@ -13,6 +14,19 @@
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
+  animation: slideInLeft 1s ease-out;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--color-primary);
+  animation: lineGrow 1s ease-out 0.5s forwards;
 }
 
 .content {
@@ -20,6 +34,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 14px;
+  animation: fadeIn 1s ease-out 0.3s backwards;
 }
 
 .skills {
@@ -35,7 +50,15 @@
   flex-direction: column;
   align-items: center;
   gap: 11px;
+  animation: popIn 0.5s ease-out backwards;
 }
+
+.skill:nth-child(1) { animation-delay: 0.1s; }
+.skill:nth-child(2) { animation-delay: 0.2s; }
+.skill:nth-child(3) { animation-delay: 0.3s; }
+.skill:nth-child(4) { animation-delay: 0.4s; }
+.skill:nth-child(5) { animation-delay: 0.5s; }
+.skill:nth-child(6) { animation-delay: 0.6s; }
 
 .skillImageContainer {
   background-color: var(--color-secondary);
@@ -45,16 +68,54 @@
   justify-content: center;
   width: 120px;
   height: 120px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skillImageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.skillImageContainer:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.skillImageContainer:hover::before {
+  left: 100%;
 }
 
 .skillImageContainer img {
   width: 75px;
+  transition: transform 0.3s ease;
+}
+
+.skillImageContainer:hover img {
+  transform: scale(1.1);
 }
 
 .skill p {
   font-size: 25px;
   font-family: var(--font-roboto);
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.skill:hover p {
+  color: var(--color-primary);
 }
 
 .history {
@@ -73,10 +134,26 @@
   background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
   border-radius: 10px;
   padding: 24px;
+  transition: all 0.3s ease;
+  animation: slideInRight 0.5s ease-out backwards;
+}
+
+.historyItem:nth-child(1) { animation-delay: 0.1s; }
+.historyItem:nth-child(2) { animation-delay: 0.2s; }
+.historyItem:nth-child(3) { animation-delay: 0.3s; }
+
+.historyItem:hover {
+  transform: translateX(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .historyItem img {
   width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.historyItem:hover img {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .historyItemDetails {
@@ -86,6 +163,11 @@
 .historyItemDetails h3 {
   font-size: 30px;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.historyItem:hover .historyItemDetails h3 {
+  color: var(--color-primary);
 }
 
 .historyItemDetails p {
@@ -101,6 +183,54 @@
   margin-left: 17px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lineGrow {
+  to {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 830px) {
   .content {
     flex-direction: column;
@@ -112,10 +242,62 @@
     width: 100%;
     flex-direction: row;
     justify-content: center;
+    gap: 20px;
+  }
+
+  .skillImageContainer {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skillImageContainer img {
+    width: 60px;
+  }
+
+  .skill p {
+    font-size: 20px;
   }
 
   .history {
     width: 100%;
     gap: 9px;
+  }
+
+  .historyItem {
+    animation: slideInUp 0.5s ease-out backwards;
+  }
+
+  .historyItem:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+    gap: 15px;
+  }
+
+  .skillImageContainer {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skillImageContainer img {
+    width: 45px;
+  }
+
+  .skill p {
+    font-size: 16px;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

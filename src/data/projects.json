@@ -12,7 +12,7 @@
     "imageSrc": "projects/dashboard.png",
     "description": "Built a responsive admin dashboard for user management systems",
     "skills": ["Bootstrap", "React" , "API"],
-    "demo": "https://admindashboard999.netlify.app/",
+    "demo": "https://wasla-dash-board.netlify.app/",
     "source": " https://github.com/elsayed-elsadek/DashBoard"
   },
   {
@@ -21,6 +21,6 @@
     "description": "Landing Page for Photographer",
     "skills": ["Html", "Bootstrap", "JavaScript" , "AOS"],
     "demo": "https://ragnar-photography.netlify.app/",
-    "source": "https://github.com/elsayed-elsadek/photography"
+    "source": "https://github.com/elsayed-elsadek/photographer"
   }
 ]

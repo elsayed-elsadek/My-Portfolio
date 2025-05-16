@@ -38,13 +38,13 @@ export const About = () => {
             </div>
           </li>
           <li className={styles.aboutItem}>
-        <div style={{display:"grid" , width:"40%" , gap:"10px" , textAlign:"end"}}>
+        <div style={{display:"grid" , width:"40%" , gap:"10px" , justifyContent:"center"}}>
 
               <img src={getImageUrl("about/khamsat.png")} alt="UI icon"
-              style={{ width: "80%", marginRight: "10px" }} />
+              style={{ width: "65px", marginRight: "10px" }} />
               
                 <img src="/assets/history/fiverrpng.png" alt="UI icon"
-              style={{ width: "75%", marginRight: "10px" , borderRadius:"50%"}} />
+              style={{ width: "60px", marginRight: "10px" , borderRadius:"50%"}} />
 
         </div>
 
