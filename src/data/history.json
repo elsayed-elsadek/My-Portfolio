@@ -1,10 +1,10 @@
 [
   {
     "role": "Freelance",
-    "organisation": "Khamsaat",
+    "organisation": "Khamsaat & Fiverr",
     "startDate": "jun, 2024",
     "endDate": "Present",
-    "experiences": ["Worked on Khamsaat", "specializing in user-friendly interfaces and efficient code."],
+    "experiences": ["Worked on Khamsaat and Fiverr", "specializing in user-friendly interfaces and efficient code."],
     "imageSrc": "history/khamsat.png"
   },
   {
@@ -15,8 +15,7 @@
     "experiences": [
       "Developed responsive user interfaces using modern frameworks like React",
       "Collaborated with UX/UI designers to implement pixel-perfect designs.",
-      "Integrated APIs to create dynamic, data-driven applications.",
-      "Built reusable components and libraries for future use.",
+      "Integrated APIs to create dynamic.",
       "Ensured cross-browser compatibility and mobile responsiveness."
     ],
     "imageSrc": "history/webmaster.png"

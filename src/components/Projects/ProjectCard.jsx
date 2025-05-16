@@ -9,12 +9,13 @@ export const ProjectCard = ({
   return (
     <div className={styles.container}>
       <img
+      style={{width:"100%" , height:"150px" , borderRadius:"3%"}}
         src={getImageUrl(imageSrc)}
         alt={`Image of ${title}`}
         className={styles.image}
       />
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
+      <h3 style={{display:"flex" , justifyContent:"center"}} className={styles.title}>-{title}</h3>
+      <p style={{opacity:"90%"}} className={styles.description}>{description}</p>
       <ul className={styles.skills}>
         {skills.map((skill, id) => {
           return (

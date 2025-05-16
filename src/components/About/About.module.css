@@ -21,6 +21,7 @@
 
 .content {
   display: flex;
+  gap: 50px;
   flex-direction: row;
   align-items: center;
 }

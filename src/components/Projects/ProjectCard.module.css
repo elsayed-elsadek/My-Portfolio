@@ -21,8 +21,8 @@
 }
 
 .description {
-  margin-top: 6px;
-  font-size: 25px;
+  margin-top: 5px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -38,11 +38,13 @@
 }
 
 .skill {
+  text-align: center;
   font-size: 25px;
   font-weight: 400;
   border-radius: 100px;
   background: var(--color-dark);
   padding: 2px 22px;
+  width: 200px;
 }
 
 .links {

@@ -16,17 +16,19 @@ export const Experience = () => {
               <div key={id} className={styles.skill}>
                 <div className={styles.skillImageContainer}>
                   <img src={getImageUrl(skill.imageSrc)} alt={skill.title} />
+
                 </div>
                 <p>{skill.title}</p>
               </div>
             );
           })}
         </div>
-        <ul className={styles.history}>
-          {history.map((historyItem, id) => {
+        {/* <ul className={styles.history}> */}
+          {/* {history.map((historyItem, id) => {
             return (
               <li key={id} className={styles.historyItem}>
                 <img
+                  style={{ borderRadius: "50%" }}
                   src={getImageUrl(historyItem.imageSrc)}
                   alt={`${historyItem.organisation} Logo`}
                 />
@@ -41,8 +43,8 @@ export const Experience = () => {
                 </div>
               </li>
             );
-          })}
-        </ul>
+          })} */}
+        {/* </ul> */}
       </div>
     </section>
   );

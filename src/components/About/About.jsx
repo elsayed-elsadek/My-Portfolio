@@ -6,7 +6,7 @@ import { getImageUrl } from "../../utils";
 export const About = () => {
   return (
     <section className={styles.container} id="about">
-      <h2 className={styles.title}>About</h2>
+      <h2 className={styles.title}>About Me</h2>
       <div className={styles.content}>
         <img
           src={getImageUrl("about/aboutImage.png")}
@@ -28,7 +28,7 @@ export const About = () => {
           </li>
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/webmaster.png")} alt="Server icon"
-              style={{ width: "15%" }} />
+              style={{ width: "15%", marginRight: "10px", borderRadius: "50%" }} />
             <div className={styles.aboutItemText}>
               <h3>Training with Web Master</h3>
               <p>
@@ -38,12 +38,20 @@ export const About = () => {
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/khamsat.png")} alt="UI icon"
-              style={{ width: "15%", marginRight: "10px" }} />
+        <div style={{display:"grid" , width:"40%" , gap:"10px" , textAlign:"end"}}>
+
+              <img src={getImageUrl("about/khamsat.png")} alt="UI icon"
+              style={{ width: "80%", marginRight: "10px" }} />
+              
+                <img src="/assets/history/fiverrpng.png" alt="UI icon"
+              style={{ width: "75%", marginRight: "10px" , borderRadius:"50%"}} />
+
+        </div>
+
             <div className={styles.aboutItemText}>
               <h3>Freelance Work</h3>
               <p>
-                Delivering custom web solutions on Khamsat, specializing in
+                Delivering custom web solutions on Khamsat and Fiverr, specializing in
                 user-friendly interfaces and efficient code.
               </p>
             </div>
